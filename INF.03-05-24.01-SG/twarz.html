@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon kosmetyczny</title>
+    <link rel="stylesheet" href="styl7.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <section class="fl">
+        <section id="left-side">
+            <nav>
+                <h2>Nasza oferta</h2>
+                <ol>
+                    <li><a href="twarz.html">Oczyszczanie twarzy</a>
+                        <ul>
+                            <li>Peeling</li>
+                            <li>Maska</li>
+                        </ul>
+                    </li>
+                    <li>Masaż</li>
+                    <li>Makijaż</li>
+                </ol>
+                <a class="nav-link" href="index.html">Strona główna</a>
+            </nav>
+            <div>
+                <img src="obraz1.jpg" alt="Personel">
+            </div>
+        </section>
+
+        <section id="right-side">
+            <header>
+                <h1>Usługi kosmetyczne</h1>
+            </header>
+            <main>
+                <h3>Kalkulator ceny wizyty</h3>
+                <form onsubmit="event.preventDefault()">
+                    <label>
+                        <input type="checkbox" name="peeling" id="peeling">&nbsp;Peeling
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="maska" id="maska">&nbsp;Maska
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="masaz" id="masaz">&nbsp;Masaż twarzy
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="makijaz" id="makijaz">&nbsp;Makijaż
+                    </label><br>
+                    <button onclick="CountPrice()">Oblicz cenę</button>
+                    <p id="price"></p>
+                </form>
+                <h3>Telefon: 111 222 333</h3>
+            </main>
+        </section>
+
+    </section>
+
+    <footer>
+        <p>Autor: 000000000</p>
+    </footer>
+</body>
+
+</html>
