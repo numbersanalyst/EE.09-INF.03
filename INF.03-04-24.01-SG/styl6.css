@@ -1,0 +1,51 @@
+* {
+    font-family: Verdana;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 140px;
+    display: flex;
+}
+
+#h-left {
+    width: 30%;
+}
+
+#h-right {
+    width: 70%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar {
+    background-color: #9FA8DA;
+    width: 160px;
+    height: 85px;
+    margin: 5px;
+    border: 1px solid #6F79A8;
+    overflow: hidden;
+}
+
+header,
+.calendar:hover,
+footer {
+    background-color: #6F79A8;
+    color: white;
+}
+
+footer {
+    margin: 5px;
+    text-align: right;
+}
+
+h6 {
+    text-align: center;
+}
