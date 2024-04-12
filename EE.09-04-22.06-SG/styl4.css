@@ -1,0 +1,63 @@
+* {
+    font-family: Verdana;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: darkgreen;
+    color:white;
+    padding: 5px;
+}
+
+main {
+    display: flex;
+}
+
+#left {
+    background-color: palegreen;
+    width: 30%;
+    height: 500px;
+}
+
+#right {
+    background-color: honeydew;
+    width: 70%;
+    height: 500px;
+    padding-top: 100px;
+}
+
+footer {
+    background-color: palegreen;
+    padding: 3px;
+}
+
+table {
+    margin: auto;
+    width: 95%;
+}
+
+table, td {
+    border: 1px solid darkgreen;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 20px 0px;
+}
+
+button {
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: honeydew;
+    color: darkgreen;
+}
