@@ -28,32 +28,32 @@
                     <th>Zamówienie</th>
                 </tr>
                 <tr>
-                    <td>Skrętka U/UTP drut</td>
+                    <td class="name">Skrętka U/UTP drut</td>
                     <td>metr</td>
-                    <td>20</td>
-                    <td><button onclick="update(1)">Aktualizuj</button></td>
-                    <td><button onclick="order('Skrętka U/UTP drut')">Zamów</button></td>
+                    <td class="amount">20</td>
+                    <td><button class="update-btn">Aktualizuj</button></td>
+                    <td><button class="order-btn">Zamów</button></td>
                 </tr>
                 <tr>
-                    <td>Skrętka U/UTP linka</td>
+                    <td class="name">Skrętka U/UTP linka</td>
                     <td>metr</td>
-                    <td>2</td>
-                    <td><button onclick="update(2)">Aktualizuj</button></td>
-                    <td><button onclick="order('Skrętka U/UTP linka')">Zamów</button></td>
+                    <td class="amount">2</td>
+                    <td><button class="update-btn">Aktualizuj</button></td>
+                    <td><button class="order-btn">Zamów</button></td>
                 </tr>
                 <tr>
-                    <td>Wtyki 8P8C</td>
+                    <td class="name">Wtyki 8P8C</td>
                     <td>sztuki</td>
-                    <td>10</td>
-                    <td><button onclick="update(3)">Aktualizuj</button></td>
-                    <td><button onclick="order('Wtyki 8P8C')">Zamów</button></td>
+                    <td class="amount">10</td>
+                    <td><button class="update-btn">Aktualizuj</button></td>
+                    <td><button class="order-btn">Zamów</button></td>
                 </tr>
                 <tr>
-                    <td>Moduły Keystone</td>
+                    <td class="name">Moduły Keystone</td>
                     <td>sztuki</td>
-                    <td>30</td>
-                    <td><button onclick="update(4)">Aktualizuj</button></td>
-                    <td><button onclick="order('Moduły Keystone')">Zamów</button></td>
+                    <td class="amount">30</td>
+                    <td><button class="update-btn">Aktualizuj</button></td>
+                    <td><button class="order-btn">Zamów</button></td>
                 </tr>
             </table>
         </section>
@@ -63,43 +63,7 @@
         <p>Stronę przygotował: 000000000</p>
     </footer>
 
-    <script>
-        let orderId = 0;
-
-        function order(productName) {
-            orderId++;
-            alert(`Zamównienie nr: ${orderId} Produkt: ${productName}`)
-        } 
-
-        function update(row) {
-            let newValue = prompt("Podaj nową ilość: ");
-            let table = document.getElementsByTagName("table")[0];
-            let rows = table.getElementsByTagName("tr");
-            let rowsLen = rows.length;
-
-            rows[row].getElementsByTagName("td")[2].innerHTML = newValue;
-            selectEmpty();
-        }
-
-        function selectEmpty(){
-            let table = document.getElementsByTagName("table")[0];
-            let rows = table.getElementsByTagName("tr");
-            let rowsLen = rows.length;
-
-            for (let i = 1; i < rowsLen; i++) {
-                const td = rows[i].getElementsByTagName("td")[2];
-                const value = td.innerHTML;
-                if (value == 0) {
-                    td.style.backgroundColor = "red"; 
-                } else if (value <= 5 && value >= 1) {
-                    td.style.backgroundColor = "yellow";
-                } else {
-                    td.style.backgroundColor = "honeydew";
-                }
-            }
-        }
-        selectEmpty();
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
