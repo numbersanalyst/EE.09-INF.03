@@ -16,7 +16,7 @@
         <button id="steelblue-btn" onclick="kolorBg(this.innerHTML)">SteelBlue</button>
         <button id="olive-btn" onclick="kolorBg(this.innerHTML)">Olive</button>
         <p>Podaj kolor czczionki</p>
-        <select id="kolor" onchange="kolorTekstu(this)">
+        <select id="kolor" onchange="kolorTekstu(event.target.value)">
             <option value="white">White</option>
             <option value="tan">Tan</option>
             <option value="bisque">Bisque</option>

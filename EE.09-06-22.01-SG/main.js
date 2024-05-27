@@ -7,8 +7,7 @@ const kolorBg = (kolor) => {
 }
 
 const kolorTekstu = (kolor) => {
-    prawy.style.color = kolor.value
-    console.log(kolor)
+    prawy.style.color = kolor
 }
 
 const zmienObramowanie = (zaznaczony) => {
