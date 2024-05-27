@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+
+<body>
+    <div id="lewy">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p>
+        <button id="idigo-btn" onclick="kolorBg(this.innerHTML)">Indigo</button>
+        <button id="steelblue-btn" onclick="kolorBg(this.innerHTML)">SteelBlue</button>
+        <button id="olive-btn" onclick="kolorBg(this.innerHTML)">Olive</button>
+        <p>Podaj kolor czczionki</p>
+        <select id="kolor" onchange="kolorTekstu(this)">
+            <option value="white">White</option>
+            <option value="tan">Tan</option>
+            <option value="bisque">Bisque</option>
+            <option value="plum">Plum</option>
+        </select>
+        <p>Podaj rozmiar czczionki w procentach, np 200%</p>
+        <input type="text" id="rozmiar" value="100%" onblur="rozmiarTekstu(this.value)">
+        <p>Czy rysunek ma mieć ramkę?</p>
+        <label><input type="checkbox" id="ramka" checked onclick="zmienObramowanie(this.checked)">Rysuj ramkę</label>
+        <p>Jaki jest typ punktora listy?</p>
+        <label><input type="radio" name="lista" value="disk" checked onclick="stylListy(this.value)">dysk</label><br>
+        <label><input type="radio" name="lista" value="square" onclick="stylListy(this.value)">kwadrat</label><br>
+        <label><input type="radio" name="lista" value="circle" onclick="stylListy(this.value)">okrąg</label><br>
+    </div>
+    <div id="prawy">
+        <img id="obraz" src="gibraltar.jpeg" alt="półwysep Gibraltar">
+        <ul id="lista">
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+        <p id="paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </div>
+    <footer>
+        Autor: 000000000
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
