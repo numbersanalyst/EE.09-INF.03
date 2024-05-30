@@ -29,12 +29,36 @@
                 <th>status</th>
             </tr>
             <!-- skrypt 1 -->
+            <?php
+                $conn = mysqli_connect("localhost", "root", "", "egzamin");
+                $sql = "SELECT czas, kierunek, nr_rejsu, status_lotu FROM przyloty ORDER BY czas ASC;";
+                $res = mysqli_query($conn, $sql);
+                
+                while($row = mysqli_fetch_row($res)) {
+                    echo "<tr>
+                    <td>$row[0]</td>
+                    <td>$row[1]</td>
+                    <td>$row[2]</td>
+                    <td>$row[3]</td>
+                    </tr>";
+                }
+
+                mysqli_close($conn);
+            ?>
         </table>
     </main>
 
     <footer>
         <div class="f-1">
             <!-- skrypt 2 -->
+            <?php
+                if (isset($_COOKIE["visited"])) {
+                    echo "<p><i>Witaj ponownie na stronie lotniska</i></p>";
+                } else {
+                    setcookie("visited", "true", time() + 2 * 3600);
+                    echo "<p><b>Dzień dobry! Strona lotniska używa ciasteczek</b></p>";
+                }
+            ?>
         </div>
         <div class="f-2">Autor: 000000000000</div>
     </footer>
