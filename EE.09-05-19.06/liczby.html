@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciągi liczbowe</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<header>
+    <section id="header-1">
+        <h2>Poznaj Ciągi Liczbowe</h2>
+    </section>
+    <section id="header-2">
+        <a href="liczby.html">
+            <h5>Ciągi arytmetyczne</h5>
+        </a>
+    </section>
+    <section id="header-3">
+        <a href="fib.html">
+            <h5>Ciąg Fibonacciego</h5>
+        </a>
+    </section>
+    <section id="header-4">
+        <img src="obraz1.png" alt="Fibonacci">
+    </section>
+</header>
+<main>
+    <section id="main-left">
+        <ol>
+            <li>ciągi arytmetyczne</li>
+            <li>ciągi geometryczne</li>
+            <li>ciąg Fibonacciego</li>
+        </ol>
+    </section>
+    <section id="main-right">
+        <h2>Generowanie ciągu arytmetycznego</h2>
+        <form>
+            <label>Pierwszy wyraz A1: <input type="number" name="a1" id="a1"></label><br>
+            <label>Różnica ciągu R: <input type="number" name="r" id="r"></label><br>
+            <label>Liczba wyrazów ciągu N: <input type="number" name="n" id="n"></label><br>
+            <button type="button" onclick="generate()">Generuj Ciąg</button>
+        </form>
+        <p id="res"></p>
+    </section>
+</main>
+<footer>
+    <p>Autor: 000000</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+
+</html>
